@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+befoer_install:
+  - docker build -t atc/react-test -f Dockerfile.dev .
+
+script:
+  - docker run atc/react-test npm run test -- --coverage
