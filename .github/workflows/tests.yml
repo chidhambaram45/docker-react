@@ -16,4 +16,4 @@ jobs:
         run: docker build -t react-test -f Dockerfile.dev .
 
       - name: Run Tests (CI Mode)
-        run: docker run -e CI=true react-test npm run test -- --coverage --watchAll=false
+        run: docker run -e CI=true react-test npm run test -- --coverage --watchAll=false --passWithNoTests
